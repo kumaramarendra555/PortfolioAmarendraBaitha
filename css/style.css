@@ -65,10 +65,8 @@ section{padding:50px 8%}
 }
 .contact-link {
     color: #FFFFFF;
-    text-decoration: none;
-    font-weight: 500;
 }
 
 .contact-link:hover {
-    color: #30D5C8;
+    opacity:.8
 }
