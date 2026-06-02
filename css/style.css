@@ -8,15 +8,6 @@ nav a{color:#fff;text-decoration:none;margin:0 8px}
 section{padding:50px 8%}
 .chips span,.project,.stats div{display:inline-block;background:rgba(255,255,255,.08);padding:12px 16px;margin:8px;border-radius:14px}
 .stats{display:flex;gap:10px;flex-wrap:wrap}
-.contact-link {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.contact-link:hover {
-    color: #30D5C8;
-}
 .about-more {
     max-height: 0;
     overflow: hidden;
@@ -71,4 +62,13 @@ section{padding:50px 8%}
 .stat-card h3 {
     font-size: 32px;
     margin: 10px 0;
+}
+.contact-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    color: #30D5C8;
 }
