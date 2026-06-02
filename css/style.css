@@ -76,98 +76,122 @@ section{padding:50px 8%}
 
 .education-section h2 {
     text-align: center;
-    margin-bottom: 50px;
     font-size: 2.5rem;
     color: #0A84FF;
+    margin-bottom: 10px;
 }
 
-.timeline {
+.subtitle {
+    text-align: center;
+    color: #bdbdbd;
+    margin-bottom: 60px;
+}
+
+.journey {
     position: relative;
     max-width: 900px;
     margin: auto;
 }
 
-.timeline::before {
-    content: '';
+.journey::before {
+    content: "";
     position: absolute;
-    left: 80px;
+    left: 35px;
     top: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(#0A84FF, #30D5C8);
+    background: linear-gradient(
+        to bottom,
+        #0A84FF,
+        #30D5C8
+    );
 }
 
-.edu-card {
+.journey-item {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     margin-bottom: 40px;
     position: relative;
 }
 
-.edu-year {
-    min-width: 80px;
-    height: 80px;
+.journey-icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 50%;
     background: linear-gradient(135deg, #0A84FF, #30D5C8);
     color: white;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 26px;
     z-index: 2;
-    box-shadow: 0 8px 20px rgba(10, 132, 255, 0.3);
 }
 
-.edu-content {
+.journey-card {
     flex: 1;
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
     padding: 25px;
-    border-radius: 16px;
-    transition: all 0.3s ease;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all .3s ease;
 }
 
-.edu-content:hover {
+.journey-card:hover {
     transform: translateY(-5px);
     border-color: #30D5C8;
-    box-shadow: 0 10px 25px rgba(48, 213, 200, 0.15);
+    box-shadow: 0 10px 30px rgba(48,213,200,.15);
 }
 
-.edu-content h3 {
-    color: #FFFFFF;
-    margin-bottom: 10px;
+.year {
+    display: inline-block;
+    background: #0A84FF;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 12px;
 }
 
-.edu-content h4 {
-    color: #30D5C8;
+.journey-card h3 {
+    color: #ffffff;
     margin-bottom: 15px;
-    font-weight: 500;
 }
 
-.edu-content p {
-    color: #d1d5db;
+.details p,
+.journey-card p {
+    color: #d6d6d6;
+    line-height: 1.8;
     margin: 5px 0;
 }
 
-@media (max-width: 768px) {
+.success {
+    background: linear-gradient(135deg,#30D5C8,#0A84FF);
+}
 
-    .timeline::before {
-        left: 35px;
+.final-step .journey-card {
+    border: 1px solid #30D5C8;
+}
+
+@media(max-width:768px){
+
+    .education-section{
+        padding:60px 20px;
     }
 
-    .edu-card {
-        gap: 20px;
+    .journey::before{
+        left:30px;
     }
 
-    .edu-year {
-        min-width: 70px;
-        height: 70px;
-        font-size: 1rem;
+    .journey-icon{
+        width:60px;
+        height:60px;
+        min-width:60px;
+        font-size:22px;
     }
 
-    .education-section {
-        padding: 60px 20px;
+    .journey-card{
+        padding:20px;
     }
 }
