@@ -19,7 +19,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
+            <a href="#projects-section">Projects</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -31,7 +31,9 @@
             <h1>Amarendra Baitha</h1>
             <h2>Senior iOS Engineer</h2>
             <p>8+ years building enterprise, B2B and B2C iOS applications using Swift, SwiftUI, Firebase, MVVM and REST
-                APIs.</p>
+                APIs.
+
+            </p>
             <a class="btn" href="assets/documents/Amarendra_Baitha_Resume.pdf"><i class="fas fa-download"></i>
                 Resume</a>
         </div>
@@ -47,6 +49,7 @@
                 developing, testing, and deploying high-performance iOS applications
                 across Healthcare, Social Networking, Enterprise Automation,
                 Travel, Food & Beverage, and Productivity domains.
+
             </p>
 
             <p>
@@ -56,8 +59,8 @@
                 Apple ecosystem technologies. Proven track record of delivering
                 scalable, maintainable, and user-centric mobile solutions from
                 concept to App Store release.
+
             </p>
-            <button class="see-more-btn" onclick="toggleAbout()">See More</button>
             <div id="aboutMore" class="about-more">
 
                 <div id="aboutMore" class="about-more">
@@ -153,23 +156,108 @@
             <span><i class="fas fa-code-branch"></i> Git</span>
         </div>
     </section>
-    <section id="experience">
-        <h2><i class="fas fa-briefcase"></i> Experience</h2>
-        <ul>
-            <li><strong>Software Engineering, Gurugram</strong> (2023–Present) – Senior iOS Engineer</li>
-            <li><strong>Deftsoft Informatics</strong> (2020–2022) – Senior iOS Engineer</li>
-            <li><strong>EWeb A1 Professionals</strong> (2018–2020) – iOS Engineer</li>
-            <li><strong>Mechlin Software Technology</strong> (2017–2018) – iOS Developer</li>
-        </ul>
+    <section class="experience-section">
+        <h2 style="display: inline-block; margin: 8;"><i class="fas fa-briefcase"></i> Experience</h2>
+        <!-- Company 1 -->
+        <div class="experience-card">
+            <button class="toggle-btn" onclick="toggleTable('exp1')">
+                ▶ Software Engineering, Gurugram
+            </button>
+
+            <div id="exp1" class="experience-content">
+                <table>
+                    <tr>
+                        <td class="label">Organization</td>
+                        <td>Software Engineering, Gurugram</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Time Period</td>
+                        <td>23 Jan 2023 – Currently Working</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Company 2 -->
+        <div class="experience-card">
+            <button class="toggle-btn" onclick="toggleTable('exp2')">
+                ▶ Live Deftsoft Informatics Pvt Ltd
+            </button>
+
+            <div id="exp2" class="experience-content">
+                <table>
+                    <tr>
+                        <td class="label">Organization</td>
+                        <td>Live Deftsoft Informatics Pvt Ltd</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Time Period</td>
+                        <td>18 Nov 2020 – 23 Dec 2022</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Company 3 -->
+        <div class="experience-card">
+            <button class="toggle-btn" onclick="toggleTable('exp3')">
+                ▶ EWeb A1 Professionals Pvt Ltd
+            </button>
+
+            <div id="exp3" class="experience-content">
+                <table>
+                    <tr>
+                        <td class="label">Organization</td>
+                        <td>EWeb A1 Professionals Pvt Ltd</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Time Period</td>
+                        <td>07 Feb 2018 – 18 Nov 2020</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Company 4 -->
+        <div class="experience-card">
+            <button class="toggle-btn" onclick="toggleTable('exp4')">
+                ▶ Mechlin Software Technology Pvt Ltd
+            </button>
+
+            <div id="exp4" class="experience-content">
+                <table>
+                    <tr>
+                        <td class="label">Organization</td>
+                        <td>Mechlin Software Technology Pvt Ltd</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Time Period</td>
+                        <td>01 May 2017 – 05 Feb 2018</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </section>
+
+    <script>
+        function toggleTable(id) {
+            const content = document.getElementById(id);
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
     <section class="projects-section">
-
         <h2><i class="fas fa-laptop-code"></i> Featured Projects</h2>
-
         <!-- Project 1 -->
         <div class="project-card">
             <button class="project-header" onclick="toggleProject('p1')">
-                <h3>➤ <i class="fas fa-stethoscope"></i> AST2 Diagnostics</h3>
+                ▶ <i class="fas fa-stethoscope"> </i> AST2 Diagnostics
+
             </button>
             <div class="project-content" id="p1">
                 <table>
@@ -217,7 +305,8 @@
         <!-- Project 2 -->
         <div class="project-card">
             <button class="project-header" onclick="toggleProject('p2')">
-                <h3>➤ <i class="fas fa-heart"></i> Moocher - Find Dates Or Friends</h3>
+                ▶ <i class="fas fa-heart"> </i> Moocher - Find Dates Or Friends
+
             </button>
 
             <div class="project-content" id="p2">
@@ -275,7 +364,8 @@
         <!-- Project 3 -->
         <div class="project-card">
             <button class="project-header" onclick="toggleProject('p3')">
-                <h3>➤ <i class="fas fa-file-pdf"></i> My PDF Scanner</h3>
+                ▶ <i class="fas fa-file-pdf"> </i> My PDF Scanner
+
             </button>
             <div class="project-content" id="p3">
                 <table>
@@ -333,10 +423,8 @@
         <!-- Project 4 -->
         <div class="project-card">
             <button class="project-header" onclick="toggleProject('p4')">
-                <h3>➤ <i class="fas fa-utensils"></i> Capital Society - Venue App</h3>
-
+                ▶ <i class="fas fa-utensils"> </i> Capital Society - Venue App
             </button>
-
             <div class="project-content" id="p4">
                 <table>
                     <tr>
@@ -384,8 +472,7 @@
         <!-- Project 5 -->
         <div class="project-card">
             <button class="project-header" onclick="toggleProject('p5')">
-                <h3>➤ <i class="fas fa-plane"></i> Altitude Inflight Magazine</h3>
-
+                ▶ <i class="fas fa-plane"> </i> Altitude Inflight Magazine
             </button>
 
             <div class="project-content" id="p5">
