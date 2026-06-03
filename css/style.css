@@ -23,8 +23,8 @@ nav a {
 .hero {
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 60px 8%
+    gap: 16px;
+    padding: 16px 8%
 }
 
 .hero img {
@@ -37,11 +37,12 @@ nav a {
     color: #fff;
     padding: 12px 18px;
     border-radius: 10px;
+    margin-top: 8px;
     text-decoration: none
 }
 
 section {
-    padding: 50px 8%
+    padding: 16px 8%
 }
 
 .chips span,
@@ -70,23 +71,7 @@ section {
 .about-more.active {
     max-height: 1000px;
     opacity: 1;
-    margin-top: 20px;
-}
-
-.see-more-btn {
-    margin-top: 20px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #0A84FF, #30D5C8);
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.see-more-btn:hover {
-    transform: translateY(-2px);
+    margin-top: 8px;
 }
 
 .stats {
@@ -288,7 +273,7 @@ section {
 
 .projects-section h1 {
     text-align: center;
-    color: #0A84FF;
+
     margin-bottom: 30px;
 }
 
@@ -302,16 +287,14 @@ section {
 
 .project-header {
     width: 100%;
-    margin-top: 0px;
-    padding: 12px 24px;
+    padding: 22px 30px;
     border: none;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #0A84FF, #30D5C8);
-    color: white;
-    cursor: pointer;
-    font-weight: 900;
-    transition: 0.3s ease;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
     text-align: left;
+    cursor: pointer;
 }
 
 .project-header:hover {
@@ -371,6 +354,87 @@ a:hover {
     table td {
         border-top: none;
         margin-bottom: 10px;
+    }
+}
+
+/* Work Experience Section */
+
+.experience-section {
+    margin-top: 8px;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.experience-card {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg,
+            #0A84FF,
+            #2BB9E8,
+            #36D1C4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-btn {
+    width: 100%;
+    padding: 22px 30px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.experience-content {
+    display: none;
+    padding: 0 25px 25px;
+}
+
+.experience-content table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 18px;
+}
+
+.experience-content td {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 18px;
+}
+
+.label {
+    width: 250px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile */
+
+@media(max-width:768px) {
+
+    .toggle-btn {
+        font-size: 20px;
+        padding: 18px;
+    }
+
+    .experience-content table {
+        font-size: 16px;
+    }
+
+    .label {
+        width: 140px;
     }
 }
 
