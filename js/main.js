@@ -28,3 +28,32 @@ function toggleTable(id) {
                     content.style.display = "block";
           }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+          const gallery = document.querySelector(".iphone-gallery");
+          const cards = document.querySelectorAll(".iphone-frame");
+
+          let currentIndex = 0;
+
+          setInterval(() => {
+                    currentIndex++;
+
+                    if (currentIndex >= cards.length) {
+                              currentIndex = 0;
+                              gallery.scrollTo({
+                                        left: 0,
+                                        behavior: "smooth"
+                              });
+                    } else {
+                              gallery.scrollTo({
+                                        left: currentIndex * (cards[0].offsetWidth + 20),
+                                        behavior: "smooth"
+                              });
+                    }
+          }, 2000);
+});
+
+cards[currentIndex].scrollIntoView({
+          behavior: "smooth",
+          inline: "center"
+});
