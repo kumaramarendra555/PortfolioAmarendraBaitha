@@ -1,7 +1,10 @@
+html,
 body {
+    width: 100%;
     margin: 0;
     font-family: -apple-system, sans-serif;
     background: #0f172a;
+    overflow-x: hidden;
     color: #fff
 }
 
@@ -30,7 +33,6 @@ nav a {
     justify-content: center;
     box-shadow: 0 10px 30px rgba(10, 132, 255, 0.3);
     cursor: pointer;
-    flex-shrink: 0;
     transition: all 0.3s ease;
 }
 
@@ -49,11 +51,11 @@ nav a {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 16px 8%
 }
 
 .hero img {
-    width: 320px;
+    width: 460px;
+    height: 660px;
     border-radius: 24px
 }
 
@@ -69,7 +71,7 @@ nav a {
 }
 
 section {
-    padding: 16px 8%
+    padding: 8px 8%
 }
 
 .chips span,
@@ -467,6 +469,66 @@ a:hover {
     margin: 10px 0;
 }
 
+/* Gallery Section */
+.gallery-section {
+    width: 100%;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.gallery-section h2 {
+    margin-bottom: 25px;
+}
+
+/* Horizontal Scroll */
+.iphone-gallery {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 0px 0 20px;
+}
+
+/* Scrollbar */
+.iphone-gallery::-webkit-scrollbar {
+    height: 3px;
+}
+
+.iphone-gallery::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background: #1e90ff;
+}
+
+/* iPhone 15 Screenshot Size */
+.iphone-frame {
+    flex: 0 0 auto;
+    /* iPhone 15 Pro ratio */
+    width: 300px;
+    height: 660px;
+    border-radius: 45px;
+    overflow: hidden;
+
+    background: #111;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease;
+}
+
+.iphone-frame:hover {
+    transform: translateY(-8px);
+}
+
+.iphone-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 @media(max-width:768px) {
 
     table,
@@ -562,6 +624,55 @@ a:hover {
     text-decoration: underline;
 }
 
+.gallery-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery img {
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.iphone-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.iphone-gallery {
+    scroll-snap-type: x mandatory;
+}
+
+.iphone-frame {
+    scroll-snap-align: center;
+}
+
+.iphone-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.iphone-gallery::-webkit-scrollbar {
+    display: none;
+}
 /* Mobile */
 
 @media(max-width:768px) {
