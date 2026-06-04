@@ -30,6 +30,7 @@ nav a {
     justify-content: center;
     box-shadow: 0 10px 30px rgba(10, 132, 255, 0.3);
     cursor: pointer;
+    flex-shrink: 0;
     transition: all 0.3s ease;
 }
 
