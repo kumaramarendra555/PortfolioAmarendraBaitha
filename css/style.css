@@ -54,9 +54,18 @@ nav a {
 }
 
 .hero img {
-    width: 460px;
-    height: 660px;
-    border-radius: 24px
+    width: 100%;
+    max-width: 460px;
+
+    height: auto;
+
+    aspect-ratio: 460 / 660;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    display: block;
 }
 
 .btn {
@@ -567,6 +576,8 @@ a:hover {
     margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
+    font-size: 16px;
+    font-weight: 700;
     background: linear-gradient(135deg,
             #0A84FF,
             #2BB9E8,
@@ -673,6 +684,7 @@ a:hover {
 .iphone-gallery::-webkit-scrollbar {
     display: none;
 }
+
 /* Mobile */
 
 @media(max-width:768px) {
